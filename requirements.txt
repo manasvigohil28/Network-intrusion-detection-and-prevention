@@ -1,0 +1,3 @@
+streamlit>=1.38
+pandas
+scapy   # only needed for live mode (python main.py --live)
