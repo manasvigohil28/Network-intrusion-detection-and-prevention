@@ -132,20 +132,4 @@ python main.py --live
 
 ---
 
-## 7. Viva questions (quick answers)
 
-1. **What is an IDS?** A system that monitors network traffic and raises alerts on suspicious activity.
-2. **What is an IPS?** An IDS that can also automatically block or drop the malicious traffic.
-3. **IDS vs IPS?** An IDS is passive (it only alerts). An IPS is active (it alerts and blocks).
-4. **Types of IDS?** NIDS (network-based, watches the network) and HIDS (host-based, watches one computer). Ours is a NIDS.
-5. **Detection methods?** Signature/rule-based (known patterns, which is what we use) and anomaly-based (learns what's normal and flags anything unusual).
-6. **What is a port scan?** Checking many ports on a target to find open services. Tools like **Nmap** do this.
-7. **What is a SYN flood?** A DoS attack that abuses the TCP 3-way handshake (SYN → SYN-ACK → ACK). The attacker sends SYNs but never the final ACK, so the server keeps half-open connections until it runs out of resources.
-8. **What is a ping flood?** A DoS attack that overloads the target with ICMP echo (ping) requests.
-9. **What is DoS / DDoS?** Denial of Service makes a service unavailable. DDoS is the same attack from many machines at once.
-10. **What is a false positive?** Normal traffic wrongly flagged as an attack. A **false negative** is a real attack that was missed.
-11. **What is a sliding window?** We only count packets from the last N seconds, so old packets don't affect the decision.
-12. **How do you block an IP?** We add it to a block list and drop its packets. On Windows it can also run `netsh advfirewall firewall add rule … action=block`.
-13. **Which libraries did you use?** Python, **Scapy** (packet capture), **Streamlit** (dashboard), **pandas** (tables and charts).
-14. **Real-world tools?** **Snort**, **Suricata** and **Zeek** are popular open-source IDS/IPS.
-15. **Why simulated traffic?** It's safe, legal, and gives the same result every time. Real attacks should only be tested on networks you own or have permission to test.
